@@ -1,103 +1,108 @@
-import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram, faXTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+    <>
+    {/* <!-- Header --> */}
+  <header className="bg-white text-purple-900 shadow-md sticky top-0 z-50">
+    <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
+      <div className="flex items-center space-x-4">
+        <img src="\images\Logo.jpg" alt="Whizz Dream innovation" className="h-16 w-16 object-contain" />
+        <h1 className="text-xl sm:text-2xl font-bold text-center sm:text-left">Whizz Dream Innovation</h1>
+      </div>
+      <nav className="space-x-4 text-center sm:text-right">
+        <a href="#" className="hover:text-blue-700">Home</a>
+        <a href="#services" className="hover:text-blue-700">Services</a>
+        <a href="#about" className="hover:text-blue-700">About</a>
+        <a href="#contact" className="hover:text-blue-700">Contact</a>
+      </nav>
     </div>
+  </header>
+
+  {/* <!-- Hero Section --> */}
+  <section className="text-center py-20 px-4">
+    <h2 className="text-4xl font-bold mb-4">Innovate. Implement. Inspire.</h2>
+    <p className="text-lg text-white/80 max-w-xl mx-auto mb-8">Empowering enterprises through IT solutions, consultancy, AI, software & hardware services, and digital education – locally and globally.</p>
+    <a href="#contact" className="px-6 py-3 bg-white text-purple-900 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition">Let’s Connect</a>
+  </section>
+
+  {/* <!-- Services Section --> */}
+  <section id="services" className="bg-white text-purple-900 py-16 px-6">
+    <div className="max-w-7xl mx-auto text-center">
+      <h3 className="text-3xl font-bold mb-10">Our Services</h3>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="p-6 bg-purple-50 rounded-xl shadow-md">
+          <h4 className="text-xl font-semibold mb-2">IT Consultancy</h4>
+          <p>Expert advisory in IT strategy, system design, and global tech implementation.</p>
+        </div>
+        <div className="p-6 bg-purple-50 rounded-xl shadow-md">
+          <h4 className="text-xl font-semibold mb-2">Software Development</h4>
+          <p>Custom software, web solutions, ERP systems, and e-commerce tools.</p>
+        </div>
+        <div className="p-6 bg-purple-50 rounded-xl shadow-md">
+          <h4 className="text-xl font-semibold mb-2">AI & Automation</h4>
+          <p>Advanced solutions in artificial intelligence, NLP, and process automation.</p>
+        </div>
+        <div className="p-6 bg-purple-50 rounded-xl shadow-md">
+          <h4 className="text-xl font-semibold mb-2">Hardware & Networking</h4>
+          <p>Sales, service, integration and support of computer systems and networks.</p>
+        </div>
+        <div className="p-6 bg-purple-50 rounded-xl shadow-md">
+          <h4 className="text-xl font-semibold mb-2">Education & Training</h4>
+          <p>Courses in IT, AI, Vedic computing, and rural computer literacy programs.</p>
+        </div>
+        <div className="p-6 bg-purple-50 rounded-xl shadow-md">
+          <h4 className="text-xl font-semibold mb-2">R&D and Consultancy</h4>
+          <p>Research, seminars, and end-to-end technology consultancy for future readiness.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* <!-- About Section --> */}
+  <section id="about" className="py-20 px-6 text-white">
+    <div className="max-w-4xl mx-auto text-center">
+      <h3 className="text-3xl font-bold mb-6">About Us</h3>
+      <p className="text-lg leading-relaxed text-white/80">Whizz Dream Big is dedicated to technological excellence and global impact. From high-end consulting to grassroots education, our mission is to bridge innovation with accessibility through solutions in AI, IT services, software, and hardware. We aim to empower businesses and individuals to dream big — and build bigger.</p>
+    </div>
+  </section>
+
+  {/* <!-- Contact Section --> */}
+  <section id="contact" className="bg-white text-purple-900 py-16 px-6">
+    <div className="max-w-2xl mx-auto text-center">
+      <h3 className="text-3xl font-bold mb-6">Contact Us</h3>
+      <form action="https://sheetdb.io/api/v1/dl02fu9pqrnl0" method="post" id="contact-form" className="space-y-4">
+        <input type="text" name="data[NAME]" id="name" placeholder="Name" required className="w-full px-4 py-2 border border-purple-300 rounded-lg" />
+        <input type="email" name="data[EMAIL]" id="email" placeholder="Email" required className="w-full px-4 py-2 border border-purple-300 rounded-lg" />
+        <textarea name="data[MESSAGE]" id="message" placeholder="Message" required className="w-full px-4 py-2 border border-purple-300 rounded-lg"></textarea>
+        <button type="submit" className="bg-purple-900 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition">Send Message</button>
+        <p id="response" className="text-sm mt-2"></p>
+      </form>
+    </div>
+  </section>
+
+  {/* <!-- Footer --> */}
+  <footer className="bg-[#53197d] text-white text-center py-6">
+    <div className="py-5 px-10 flex items-center justify-between">
+      <img src="/images/Logo.jpg" className="h-25 w-35" />
+      <div className="flex gap-5">
+        <a href="#" className="text-gray-100 hover:text-gray-400 underline">Home</a>
+        <a href="#services" className="text-gray-100 hover:text-gray-400 underline">Services</a>
+        <a href="#about" className="text-gray-100 hover:text-gray-400 underline">About</a>
+        <a href="#contact" className="text-gray-100 hover:text-gray-400 underline">Contact</a>
+      </div>
+      <div className="grid grid-cols-2 gap-2">
+        <a href="#"><FontAwesomeIcon icon={faInstagram} className="h-8 hover:text-gray-400" /></a>
+        <a href="#"><FontAwesomeIcon icon={faFacebook} className="h-8 hover:text-gray-400" /></a>
+        <a href="#"><FontAwesomeIcon icon={faXTwitter} className="h-8 hover:text-gray-400" /></a>
+        <a href="#"><FontAwesomeIcon icon={faLinkedin} className="h-8 hover:text-gray-400" /></a>
+      </div>
+    </div>
+    <div>
+      &copy; 2025 Whizz Dream Big. All rights reserved.
+    </div>
+  </footer>
+    </>
   );
 }
