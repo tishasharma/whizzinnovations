@@ -9,7 +9,6 @@ function ContactUsPage() {
 
     formData.append("data[TIMESTAMP]", new Date().toISOString());
 
-    // Show loading state
     if (responseElement) {
       responseElement.textContent = 'Sending message...';
       responseElement.className = 'text-sm mt-2 text-blue-600';
