@@ -30,19 +30,29 @@ export default function RootLayout({ children }) {
         {children}
 
         <footer className="text-center py-6 shadow-[-4px_-4px_10px_rgba(0,0,0,0.1)]">
-          <div className="py-5 px-10 flex items-center justify-between">
-            <img src="/images/Logo.jpg" className="h-25 w-35" />
-            <div className="flex gap-5">
-              <Link href="/" className="text-[#53197d] hover:text-blue-900 underline">Home</Link>
-              <Link href="/services" className="text-[#53197d] hover:text-blue-900 underline">Services</Link>
-              <Link href="/about" className="text-[#53197d] hover:text-blue-900 underline">About</Link>
-              <Link href="/contact" className="text-[#53197d] hover:text-blue-900 underline">Contact</Link>
+          <div className="py-5 px-4 sm:px-10 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0">
+            <img src="/images/Logo.jpg" className="h-16 w-16 sm:h-20 sm:w-35 object-contain" />
+            
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-5 order-3 lg:order-2">
+              <Link href="/" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Home</Link>
+              <Link href="/services" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Services</Link>
+              <Link href="/about" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">About</Link>
+              <Link href="/contact" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Contact</Link>
             </div>
-            <div className="grid grid-cols-2 gap-2">
-              <Link href="/"><FontAwesomeIcon icon={faInstagram} className="h-8 hover:text-blue-900 text-[#53197d]" /></Link>
-              <Link href="/"><FontAwesomeIcon icon={faFacebook} className="h-8 hover:text-blue-900 text-[#53197d]" /></Link>
-              <Link href="/"><FontAwesomeIcon icon={faXTwitter} className="h-8 hover:text-blue-900 text-[#53197d]" /></Link>
-              <Link href="/"><FontAwesomeIcon icon={faLinkedin} className="h-8 hover:text-blue-900 text-[#53197d]" /></Link>
+            
+            <div className="flex gap-3 sm:gap-4 order-2 lg:order-3">
+              <Link href="/" className="transform hover:scale-110 transition-transform">
+                <FontAwesomeIcon icon={faInstagram} className="h-6 sm:h-8 hover:text-blue-900 text-[#53197d]" />
+              </Link>
+              <Link href="/" className="transform hover:scale-110 transition-transform">
+                <FontAwesomeIcon icon={faFacebook} className="h-6 sm:h-8 hover:text-blue-900 text-[#53197d]" />
+              </Link>
+              <Link href="/" className="transform hover:scale-110 transition-transform">
+                <FontAwesomeIcon icon={faXTwitter} className="h-6 sm:h-8 hover:text-blue-900 text-[#53197d]" />
+              </Link>
+              <Link href="/" className="transform hover:scale-110 transition-transform">
+                <FontAwesomeIcon icon={faLinkedin} className="h-6 sm:h-8 hover:text-blue-900 text-[#53197d]" />
+              </Link>
             </div>
           </div>
           <div className="text-black">
