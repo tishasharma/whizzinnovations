@@ -123,7 +123,7 @@ function ContactUsPage() {
               <div className="text-gray-600 space-y-2">
                 <p>
                   <span className="font-medium">Main Office:</span><br />
-                  <a href="tel:+1234567890" className="text-purple-900 hover:text-blue-900 transition-colors text-lg font-medium">+91 7011286545</a>
+                  <a href="tel:+917011286545" className="text-purple-900 hover:text-blue-900 transition-colors text-lg font-medium">+91 7011286545</a>
                 </p>
                 <p className="text-sm text-gray-500 mt-2">
                   Mon - Fri: 9:00 AM - 6:00 PM<br />
