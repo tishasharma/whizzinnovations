@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faXTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import Image from "next/image";
 import "./globals.css";
 
 export const metadata = {
@@ -15,7 +16,7 @@ export default function RootLayout({ children }) {
         <header className="bg-gray-100 text-purple-900 shadow-md sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between space-y-2 sm:space-y-0">
             <div className="flex items-center space-x-4">
-              <img src="\images\Logo.jpg" alt="Whizz Dream innovation" className="h-16 w-16 object-contain" />
+              <Image src="/images/Logo.jpg" alt="Whizz Dream innovation" width={64} height={64} className="h-16 w-16 object-contain" />
               <h1 className="text-xl sm:text-2xl font-bold text-center sm:text-left">Whizz Dream Innovation</h1>
             </div>
             <nav className="space-x-4 text-center sm:text-right">
@@ -31,7 +32,7 @@ export default function RootLayout({ children }) {
 
         <footer className="text-center py-6 shadow-[-4px_-4px_10px_rgba(0,0,0,0.1)]">
           <div className="py-5 px-4 sm:px-16 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0">
-            <img src="/images/Logo.jpg" className="h-16 w-16 sm:h-20 sm:w-20 object-contain" />
+            <Image src="/images/Logo.jpg" alt="Whizz Dream Big Logo" width={80} height={80} className="h-16 w-16 sm:h-20 sm:w-20 object-contain" />
             
             <div className="flex flex-wrap justify-center gap-4 sm:gap-5 order-3 lg:order-2">
               <Link href="/" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Home</Link>

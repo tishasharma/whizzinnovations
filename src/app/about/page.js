@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 
 const aboutPage = () => {
   const sliderImages = [
@@ -72,9 +73,11 @@ const aboutPage = () => {
                   className="flex-shrink-0 w-80 group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                 >
                   <div className="relative overflow-hidden rounded-lg bg-white shadow-lg border border-gray-200">
-                    <img 
+                    <Image 
                       src={image.src} 
                       alt={image.title}
+                      width={320}
+                      height={192}
                       className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

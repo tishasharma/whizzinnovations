@@ -69,7 +69,7 @@ function ContactUsPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-purple-900 mb-4">Get in Touch</h3>
-            <p className="text-gray-600 text-lg">Visit us, call us, or send us an email. We're here to help!</p>
+            <p className="text-gray-600 text-lg">Visit us, call us, or send us an email. We&apos;re here to help!</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
