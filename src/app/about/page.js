@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 
-const aboutPage = () => {
+const AboutPage = () => {
   const sliderImages = [
     {
       src: "/images/1.jpg",
@@ -156,4 +156,4 @@ const aboutPage = () => {
   )
 }
 
-export default aboutPage
+export default AboutPage

@@ -1,5 +1,5 @@
 
-function servicesPage() {
+function ServicesPage() {
   return (
     <section id="services" className="bg-gray-50 text-purple-900 py-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -35,4 +35,4 @@ function servicesPage() {
   )
 }
 
-export default servicesPage
+export default ServicesPage
