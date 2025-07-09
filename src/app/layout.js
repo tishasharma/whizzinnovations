@@ -41,16 +41,16 @@ export default function RootLayout({ children }) {
             </div>
             
             <div className="flex gap-3 sm:gap-4 order-2 lg:order-3">
-              <Link href="/" className="transform hover:scale-110 transition-transform">
+              <Link href="https://www.instagram.com/whizzdreambig?igsh=azFpeXE4bWF5aXlx&utm_source=qr" target="blank" className="transform hover:scale-110 transition-transform">
                 <FontAwesomeIcon icon={faInstagram} className="h-6 sm:h-8 hover:text-blue-900 text-[#53197d]" />
               </Link>
-              <Link href="/" className="transform hover:scale-110 transition-transform">
+              <Link href="https://www.facebook.com/WhizzDreamBig" target="blank" className="transform hover:scale-110 transition-transform">
                 <FontAwesomeIcon icon={faFacebook} className="h-6 sm:h-8 hover:text-blue-900 text-[#53197d]" />
               </Link>
-              <Link href="/" className="transform hover:scale-110 transition-transform">
+              <Link href="/" target="blank" className="transform hover:scale-110 transition-transform">
                 <FontAwesomeIcon icon={faXTwitter} className="h-6 sm:h-8 hover:text-blue-900 text-[#53197d]" />
               </Link>
-              <Link href="/" className="transform hover:scale-110 transition-transform">
+              <Link href="/" target="blank" className="transform hover:scale-110 transition-transform">
                 <FontAwesomeIcon icon={faLinkedin} className="h-6 sm:h-8 hover:text-blue-900 text-[#53197d]" />
               </Link>
             </div>
