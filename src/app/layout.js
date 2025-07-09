@@ -30,8 +30,8 @@ export default function RootLayout({ children }) {
         {children}
 
         <footer className="text-center py-6 shadow-[-4px_-4px_10px_rgba(0,0,0,0.1)]">
-          <div className="py-5 px-4 sm:px-10 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0">
-            <img src="/images/Logo.jpg" className="h-16 w-16 sm:h-20 sm:w-35 object-contain" />
+          <div className="py-5 px-4 sm:px-16 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0">
+            <img src="/images/Logo.jpg" className="h-16 w-16 sm:h-20 sm:w-20 object-contain" />
             
             <div className="flex flex-wrap justify-center gap-4 sm:gap-5 order-3 lg:order-2">
               <Link href="/" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Home</Link>
