@@ -2,6 +2,7 @@ import Link from "next/link";
 import ContactUsPage from "./contact/page";
 import AboutPage from "./about/page";
 import ServicesPage from "./services/page";
+import OurTeam from "./team/page";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </section>
       <AboutPage/>
       <ServicesPage/>
+      <OurTeam/>
       <ContactUsPage/>
     </>
   );
