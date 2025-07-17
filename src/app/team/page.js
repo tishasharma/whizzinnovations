@@ -62,8 +62,8 @@ const OurTeam = () => {
               
               <div className="p-6 space-y-3">
                 <div>
-                  <span className="font-semibold text-purple-900">{member.role}:</span>
-                  <span className="text-gray-700 ml-2">{member.company}</span>
+                  <span className="font-semibold text-purple-900">Role:</span>
+                  <span className="text-gray-700 ml-2">{member.role} ({member.company})</span>
                 </div>
                 
                 {member.current && (
