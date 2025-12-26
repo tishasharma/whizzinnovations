@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const AboutPage = () => {
   const sliderImages = [
@@ -72,24 +73,47 @@ const AboutPage = () => {
                   key={`first-${index}`}
                   className="flex-shrink-0 w-80 group cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                 >
-                  <div className="relative overflow-hidden rounded-lg bg-white shadow-lg border border-gray-200">
-                    <Image 
-                      src={image.src} 
-                      alt={image.title}
-                      width={320}
-                      height={192}
-                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <h4 className="font-bold text-lg mb-1">{image.title}</h4>
-                      <p className="text-sm opacity-90">{image.description}</p>
+                  {(image.title === "Education & Training") ? (
+                    <Link href="/trainings" className="block">
+                      <div className="relative overflow-hidden rounded-lg bg-white shadow-lg border border-gray-200">
+                        <Image 
+                          src={image.src} 
+                          alt={image.title}
+                          width={320}
+                          height={192}
+                          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                          <h4 className="font-bold text-lg mb-1">{image.title}</h4>
+                          <p className="text-sm opacity-90">{image.description}</p>
+                        </div>
+                        <div className="p-4">
+                          <h4 className="font-semibold text-purple-900 mb-2 group-hover:text-blue-900 transition-colors duration-300">{image.title}</h4>
+                          <p className="text-gray-600 text-sm group-hover:text-gray-800 transition-colors duration-300">{image.description}</p>
+                        </div>
+                      </div>
+                    </Link>
+                  ) : (
+                    <div className="relative overflow-hidden rounded-lg bg-white shadow-lg border border-gray-200">
+                      <Image 
+                        src={image.src} 
+                        alt={image.title}
+                        width={320}
+                        height={192}
+                        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <h4 className="font-bold text-lg mb-1">{image.title}</h4>
+                        <p className="text-sm opacity-90">{image.description}</p>
+                      </div>
+                      <div className="p-4">
+                        <h4 className="font-semibold text-purple-900 mb-2 group-hover:text-blue-900 transition-colors duration-300">{image.title}</h4>
+                        <p className="text-gray-600 text-sm group-hover:text-gray-800 transition-colors duration-300">{image.description}</p>
+                      </div>
                     </div>
-                    <div className="p-4">
-                      <h4 className="font-semibold text-purple-900 mb-2 group-hover:text-blue-900 transition-colors duration-300">{image.title}</h4>
-                      <p className="text-gray-600 text-sm group-hover:text-gray-800 transition-colors duration-300">{image.description}</p>
-                    </div>
-                  </div>
+                  )}
                 </div>
               ))}
             </div>

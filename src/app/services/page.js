@@ -21,10 +21,10 @@ function ServicesPage() {
             <h4 className="text-xl font-semibold mb-2">Hardware & Networking</h4>
             <p>Sales, service, integration and support of computer systems and networks.</p>
             </div>
-            <div className="p-6 bg-purple-50 rounded-xl shadow-md">
+            <a href="/trainings" className="p-6 bg-purple-50 rounded-xl shadow-md hover:shadow-lg hover:bg-purple-100 transition-all cursor-pointer">
             <h4 className="text-xl font-semibold mb-2">Education & Training</h4>
             <p>Courses in IT, AI, Vedic computing, and rural computer literacy programs.</p>
-            </div>
+            </a>
             <div className="p-6 bg-purple-50 rounded-xl shadow-md">
             <h4 className="text-xl font-semibold mb-2">R&D and Consultancy</h4>
             <p>Research, seminars, and end-to-end technology consultancy for future readiness.</p>

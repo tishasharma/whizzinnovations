@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
               <Link href="/services" className="hover:text-blue-700">Services</Link>
               <Link href="/about" className="hover:text-blue-700">About</Link>
               <Link href="/team" className="hover:text-blue-700">Team</Link>
+              <Link href="/trainings" className="hover:text-blue-700">Trainings</Link>
               <Link href="/contact" className="hover:text-blue-700">Contact</Link>
             </nav>
           </div>
@@ -40,6 +41,7 @@ export default function RootLayout({ children }) {
               <Link href="/services" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Services</Link>
               <Link href="/about" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">About</Link>
               <Link href="/team" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Team</Link>
+              <Link href="/trainings" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Trainings</Link>
               <Link href="/contact" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Contact</Link>
             </div>
             
