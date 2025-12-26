@@ -30,14 +30,14 @@ export default function Trainings() {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-3">Linux Administration</h3>
                 <p className="text-gray-700 leading-relaxed">
                   Move beyond the terminal. Master high-level kernel tuning, advanced automation with Bash, 
-                  and the art of system hardening. If you want to run the backends of the world's largest companies, start here.
+                  and the art of system hardening. If you want to run the backends of the world&apos;s largest companies, start here.
                 </p>
               </div>
               
               <div className="border-l-4 border-blue-500 pl-6">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-3">Windows Enterprise Administration</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  It's more than just servers; it's about infrastructure orchestration. Master Active Directory Forest design, 
+                  It&apos;s more than just servers; it&apos;s about infrastructure orchestration. Master Active Directory Forest design, 
                   massive-scale PowerShell automation, and seamless Hybrid-Cloud integration.
                 </p>
               </div>
@@ -67,7 +67,7 @@ export default function Trainings() {
               <div className="border-l-4 border-purple-500 pl-6">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-3">The Java Architect Masterclass</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Java isn't just a language; it's the backbone of global finance and commerce. Master JVM performance tuning, 
+                  Java isn&apos;t just a language; it&apos;s the backbone of global finance and commerce. Master JVM performance tuning, 
                   high-concurrency threading, and enterprise design patterns that never fail.
                 </p>
               </div>
@@ -75,8 +75,8 @@ export default function Trainings() {
               <div className="border-l-4 border-purple-500 pl-6">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-3">Frontend Titans: React & Angular</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Choose your weapon. Whether it's the flexible, hook-driven world of React or the robust, structured 
-                  ecosystem of Angular, we'll teach you to build high-performance UIs that users love.
+                  Choose your weapon. Whether it&apos;s the flexible, hook-driven world of React or the robust, structured 
+                  ecosystem of Angular, we&apos;ll teach you to build high-performance UIs that users love.
                 </p>
               </div>
               
@@ -105,7 +105,7 @@ export default function Trainings() {
               <div className="border-l-4 border-green-500 pl-6">
                 <h3 className="text-2xl font-semibold text-gray-900 mb-3">Oracle DBA: The Expert Track</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  Go deep into the world's most powerful database. From Oracle RAC (Real Application Clusters) to 
+                  Go deep into the world&apos;s most powerful database. From Oracle RAC (Real Application Clusters) to 
                   high-stakes RMAN recovery, become the DBA that companies rely on when downtime is not an option.
                 </p>
               </div>
@@ -114,15 +114,15 @@ export default function Trainings() {
                 <h3 className="text-2xl font-semibold text-gray-900 mb-3">⚡ 4-Week Intensive: Data Analytics & FinOps</h3>
                 <p className="text-xl text-gray-800 font-semibold mb-3">Where Data Science Meets Financial Strategy</p>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  In today's world, it's not enough to just analyze data—you have to do it cost-effectively. 
-                  This 4-week sprint is designed to turn you into a "Cloud-Smart" Analyst who knows how to drive 
+                  In today&apos;s world, it&apos;s not enough to just analyze data—you have to do it cost-effectively. 
+                  This 4-week sprint is designed to turn you into a &quot;Cloud-Smart&quot; Analyst who knows how to drive 
                   insights without blowing the budget.
                 </p>
                 <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
                   <li>Visual Storytelling & Advanced SQL</li>
                   <li>Predictive Modeling & Business Intelligence</li>
                   <li>The FinOps Framework (Cloud Cost Management)</li>
-                  <li>The "Unit Economics" of Data—Optimizing for ROI</li>
+                  <li>The &quot;Unit Economics&quot; of Data—Optimizing for ROI</li>
                 </ul>
                 <Link 
                   href="https://docs.google.com/document/d/1vDrbKRObSQcN9NDXj4IouB5vLAwNdDIYl9Ijm8XjOlw/edit?tab=t.0#heading=h.ded5nta3xgkh"
