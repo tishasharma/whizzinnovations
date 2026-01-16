@@ -14,6 +14,10 @@ function ServicesPage() {
             <p>Custom software, web solutions, ERP systems, and e-commerce tools.</p>
             </div>
             <div className="p-6 bg-purple-50 rounded-xl shadow-md">
+            <h4 className="text-xl font-semibold mb-2">Digital Marketing</h4>
+            <p>SEO, performance campaigns, content strategy, and analytics-driven optimization.</p>
+            </div>
+            <div className="p-6 bg-purple-50 rounded-xl shadow-md">
             <h4 className="text-xl font-semibold mb-2">AI & Automation</h4>
             <p>Advanced solutions in artificial intelligence, NLP, and process automation.</p>
             </div>

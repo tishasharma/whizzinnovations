@@ -5,7 +5,7 @@ const OurTeam = () => {
   const teamMembers = [
     {
       name: "DIMPLE SHARMA",
-      role: "Founder",
+      role: "Founder and CEO",
       company: "Whizz Dream Big",
       skills: "Quality engineer, Technical writer",
       languages: "Proficient in German, Hindi and English",
@@ -13,13 +13,13 @@ const OurTeam = () => {
     },
     {
       name: "NITESH SHARMA",
-      role: "Advisory",
+      role: "Co-founder and CTO",
       company: "Whizz Dream Big",
       current: "Alvesian",
       workHistory: "Ernst&Young, BCG, Naviga, ISSC",
       skills: "IT specialist and consultancy",
       languages: "Proficient in Hindi and English",
-      image: "/images/NiteshSharma.png"
+      image: "/images/NiteshSharma.jpeg"
     },
     {
       name: "RACHNA SHARMA",
@@ -29,6 +29,26 @@ const OurTeam = () => {
       skills: "Data analysis, Talent recruitment for different fields",
       languages: "Proficient in Swedish, Hindi and English",
       image: "/images/RachnaSharma.png"
+    },
+    {
+      name: "VIPUL MITTAL",
+      role: "Sr. Partner - Business Advisory",
+      company: "Whizz Dream Big",
+      highlights: [
+        "28+ years leading global Big 4 (EY) consulting offshoring; IIT/IIM grad with leadership courses from Harvard and Wharton.",
+        "Global P&L leader driving business transformation and digitization; deploys technology levers to reduce cost and enhance customer experience."
+      ],
+      image: "/images/vipul_mittal.jpg"
+    },
+    {
+      name: "VINEET VAID",
+      role: "Sr. Partner - Financial Services",
+      company: "Whizz Dream Big",
+      highlights: [
+        "25+ years in banking managing both liability and asset businesses; seasoned leader in scaling new lines.",
+        "Oversees HNI segment growth across the country, leading product development and cross-selling with full P&L accountability."
+      ],
+      image: "/images/vineet_vaid.png"
     }
   ];
 
@@ -48,47 +68,65 @@ const OurTeam = () => {
           {teamMembers.map((member, index) => (
             <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="bg-gradient-to-br from-purple-900 to-blue-900 p-6 text-center">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full border-4 border-yellow-400 overflow-hidden">
-                  <Image 
-                    src={member.image} 
-                    alt={member.name}
-                    width={128}
-                    height={128}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full border-4 border-yellow-400 overflow-hidden flex items-center justify-center bg-white/20">
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      width={128}
+                      height={128}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-sm text-white/80">
+                      Photo coming soon
+                    </div>
+                  )}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
               </div>
-              
+
               <div className="p-6 space-y-3">
                 <div>
                   <span className="font-semibold text-purple-900">Role:</span>
                   <span className="text-gray-700 ml-2">{member.role} ({member.company})</span>
                 </div>
-                
+
                 {member.current && (
                   <div>
                     <span className="font-semibold text-purple-900">Current:</span>
                     <span className="text-gray-700 ml-2">{member.current}</span>
                   </div>
                 )}
-                
+
                 {member.workHistory && (
                   <div>
                     <span className="font-semibold text-purple-900">Work History:</span>
                     <span className="text-gray-700 ml-2">{member.workHistory}</span>
                   </div>
                 )}
-                
-                <div>
-                  <span className="font-semibold text-purple-900">Skills:</span>
-                  <span className="text-gray-700 ml-2">{member.skills}</span>
-                </div>
-                
-                <div>
-                  <span className="font-semibold text-purple-900">Languages:</span>
-                  <span className="text-gray-700 ml-2">{member.languages}</span>
-                </div>
+
+                {member.skills && (
+                  <div>
+                    <span className="font-semibold text-purple-900">Skills:</span>
+                    <span className="text-gray-700 ml-2">{member.skills}</span>
+                  </div>
+                )}
+
+                {member.languages && (
+                  <div>
+                    <span className="font-semibold text-purple-900">Languages:</span>
+                    <span className="text-gray-700 ml-2">{member.languages}</span>
+                  </div>
+                )}
+
+                {member.highlights && member.highlights.length > 0 && (
+                  <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
+                    {member.highlights.map((point, idx) => (
+                      <li key={idx}>{point}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
           ))}
