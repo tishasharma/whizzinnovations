@@ -5,22 +5,22 @@ import Link from 'next/link'
 const AboutPage = () => {
   const sliderImages = [
     {
-      src: "/images/1.jpg",
+      src: "/images/Whizz Website Pics/innovation hub.jpg",
       title: "Innovation Hub",
       description: "Our state-of-the-art innovation center where cutting-edge ideas come to life"
     },
     {
-      src: "/images/2.jpg",
+      src: "/images/Whizz Website Pics/AI Development.jpg",
       title: "AI Development",
       description: "Advanced artificial intelligence solutions transforming businesses worldwide"
     },
     {
-      src: "/images/3.jpg",
+      src: "/images/Whizz Website Pics/Team Collaboration.jpg",
       title: "Team Collaboration",
       description: "Expert developers and consultants working together on groundbreaking projects"
     },
     {
-      src: "/images/4.jpg",
+      src: "/images/Whizz Website Pics/Global Impact.jpg",
       title: "Global Impact",
       description: "Delivering technology solutions that make a difference across continents"
     },
@@ -30,12 +30,12 @@ const AboutPage = () => {
       description: "Empowering the next generation through comprehensive technology education"
     },
     {
-      src: "/images/6.jpg",
+      src: "/images/Whizz Website Pics/software development.jpg",
       title: "Software Excellence",
       description: "Creating robust, scalable software solutions for modern challenges"
     },
     {
-      src: "/images/7.jpg",
+      src: "/images/Whizz Website Pics/Global Impact.jpg",
       title: "Global Impact",
       description: "Delivering technology solutions that make a difference across continents"
     },
@@ -45,7 +45,7 @@ const AboutPage = () => {
       description: "Empowering the next generation through comprehensive technology education"
     },
     {
-      src: "/images/9.jpg",
+      src: "/images/Whizz Website Pics/software development.jpg",
       title: "Software Excellence",
       description: "Creating robust, scalable software solutions for modern challenges"
     }
