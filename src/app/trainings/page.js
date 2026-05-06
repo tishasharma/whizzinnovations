@@ -15,6 +15,31 @@ export default function Trainings() {
           </p>
         </div>
 
+        <section className="mb-16">
+          <div className="grid items-center gap-8 rounded-lg bg-gray-950 p-8 text-white shadow-xl md:grid-cols-[1fr_auto]">
+            <div>
+              <p className="mb-3 text-sm font-bold uppercase tracking-normal text-cyan-200">Upcoming AI cohort</p>
+              <h2 className="mb-4 text-3xl font-black md:text-4xl">AI Builders Bootcamp</h2>
+              <p className="max-w-3xl text-lg leading-8 text-purple-100">
+                Learn by building with AI through 16 hours of live online sessions.
+                Build prompt confidence, content workflows, and practical mini projects
+                with a bonus vibe coding session.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3 text-sm font-semibold text-cyan-100">
+                <span className="rounded-full border border-cyan-300/30 px-3 py-1">2 weeks</span>
+                <span className="rounded-full border border-cyan-300/30 px-3 py-1">Online live sessions</span>
+                <span className="rounded-full border border-cyan-300/30 px-3 py-1">Rs.100 refundable fee</span>
+              </div>
+            </div>
+            <Link
+              href="/ai-bootcamp"
+              className="inline-flex min-h-12 items-center justify-center rounded-lg bg-purple-600 px-6 py-3 font-bold text-white transition hover:bg-purple-500"
+            >
+              View bootcamp
+            </Link>
+          </div>
+        </section>
+
         {/* Advanced Systems & Infrastructure */}
         <section className="mb-16">
           <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">

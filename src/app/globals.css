@@ -1,5 +1,37 @@
 @import "tailwindcss";
 
+@keyframes bootcamp-dialog-pop {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bootcamp-qr-scan {
+  from {
+    transform: translateY(-12px);
+  }
+  to {
+    transform: translateY(132px);
+  }
+}
+
+@keyframes bootcamp-pulse-ring {
+  0% {
+    opacity: 0.85;
+    transform: scale(0.88);
+  }
+  70%,
+  100% {
+    opacity: 0;
+    transform: scale(1.35);
+  }
+}
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
