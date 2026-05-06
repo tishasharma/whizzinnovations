@@ -38,6 +38,13 @@ const highlights = [
   { value: "15 May", label: "Batch starting", icon: Rocket },
 ];
 
+const programFacts = [
+  { label: "Total sessions", value: "8 live sessions" },
+  { label: "Session length", value: "2 hours each" },
+  { label: "Batch size", value: "25-35 learners" },
+  { label: "Method", value: "Mentorship-driven" },
+];
+
 const outcomes = [
   "Use AI tools confidently for daily work, study, content, and business tasks.",
   "Write better prompts for research, planning, design, writing, and automation.",
@@ -79,6 +86,18 @@ const modules = [
     icon: Code2,
   },
   {
+    title: "No-code Websites",
+    eyebrow: "Build faster",
+    copy: "Turn ideas into landing pages and no-code web experiences with AI-guided planning, copy, and structure.",
+    icon: WandSparkles,
+  },
+  {
+    title: "Responsible AI",
+    eyebrow: "Think clearly",
+    copy: "Detect deepfakes, check accuracy, understand bias, and use AI with academic integrity and control.",
+    icon: Target,
+  },
+  {
     title: "Build Projects",
     eyebrow: "Final sessions",
     copy: "Create practical projects like AI study assistants, business content kits, portfolio pages, and workflow dashboards.",
@@ -100,6 +119,23 @@ const learnerTypes = [
   "Working professionals who want faster output",
   "Creators who want content systems",
   "Entrepreneurs who want practical automation",
+];
+
+const responsibleSkills = [
+  "Identify fake and AI-generated content",
+  "Understand AI limitations and bias",
+  "Use AI for genuine academic productivity",
+  "Practice cyber safety and responsible digital behaviour",
+  "Question outputs instead of accepting them blindly",
+];
+
+const schoolGains = [
+  "Creativity and confidence for students",
+  "Future-ready technology skills",
+  "Real project portfolio",
+  "Innovation positioning for schools",
+  "Strong parent appeal",
+  "Student certifications",
 ];
 
 export default function AIBootcampPage() {
@@ -218,6 +254,55 @@ export default function AIBootcampPage() {
         </div>
       </section>
 
+      <section className="bg-[#050509] px-5 pb-16 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid items-end gap-7 lg:grid-cols-[0.75fr_1fr]">
+            <div>
+              <p className="mb-3 text-sm font-black uppercase tracking-normal text-cyan-100">
+                Open for all. 100% hands-on. Certificate included.
+              </p>
+              <h2 className="text-4xl font-black leading-tight sm:text-5xl">
+                The program is built to make learners active creators
+              </h2>
+            </div>
+            <p className="text-lg leading-8 text-purple-100">
+              The course covers ChatGPT, Gemini, Claude, Canva AI, no-code
+              websites, prompt thinking, and project practice so learners can
+              move from passive usage to active creation.
+            </p>
+          </div>
+
+          <div className="mt-9 grid grid-cols-1 gap-5 lg:grid-cols-[1.1fr_0.9fr]">
+            <article className="relative min-h-[320px] overflow-hidden rounded-lg border border-white/10 bg-black">
+              <Image
+                src="/images/ai-bootcamp/master-ai-wide.jpeg"
+                alt="Master AI before others even start"
+                fill
+                className="object-cover"
+              />
+            </article>
+            <div className="grid gap-5">
+              <article className="relative min-h-[250px] overflow-hidden rounded-lg border border-white/10 bg-black">
+                <Image
+                  src="/images/ai-bootcamp/school-ready-value.jpeg"
+                  alt="Future-ready student AI program"
+                  fill
+                  className="object-cover"
+                />
+              </article>
+              <div className="grid grid-cols-2 gap-3">
+                {programFacts.map((fact) => (
+                  <div key={fact.label} className="rounded-lg border border-white/10 bg-white/5 p-4">
+                    <p className="text-sm text-purple-100">{fact.label}</p>
+                    <p className="mt-1 text-xl font-black text-white">{fact.value}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="course-roadmap" className="bg-white px-5 py-16 text-gray-950 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.65fr_1fr]">
@@ -248,6 +333,41 @@ export default function AIBootcampPage() {
                   <h3 className="text-xl font-black text-gray-950">{title}</h3>
                   <p className="mt-2 leading-7 text-gray-700">{copy}</p>
                 </article>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#07112c] px-5 py-16 text-white sm:px-8 lg:px-12">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.9fr_1fr]">
+          <div className="relative min-h-[360px] overflow-hidden rounded-lg border border-white/10 bg-black">
+            <Image
+              src="/images/ai-bootcamp/ai-builders-school.jpeg"
+              alt="AI Builders Bootcamp for AI-literate thinkers"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          <div>
+            <p className="mb-3 text-sm font-black uppercase tracking-normal text-cyan-100">
+              Responsible AI matters
+            </p>
+            <h2 className="text-4xl font-black leading-tight sm:text-5xl">
+              We teach learners to use AI with clarity, confidence, and control
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-blue-100">
+              The proposal focuses on more than shortcuts. Learners practice
+              critical thinking, responsible usage, academic integrity, and real
+              project creation.
+            </p>
+            <div className="mt-7 grid gap-3">
+              {responsibleSkills.map((skill) => (
+                <div key={skill} className="flex gap-3 rounded-lg border border-white/10 bg-white/8 p-4">
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-lime-300" aria-hidden="true" />
+                  <span>{skill}</span>
+                </div>
               ))}
             </div>
           </div>
@@ -300,6 +420,32 @@ export default function AIBootcampPage() {
                 <p className="text-2xl font-black leading-tight">Prompt. Create. Automate. Build.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white px-5 py-16 text-gray-950 sm:px-8 lg:px-12">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.78fr_1fr]">
+          <div>
+            <p className="mb-3 text-sm font-black uppercase tracking-normal text-purple-800">
+              What students and schools gain
+            </p>
+            <h2 className="text-4xl font-black leading-tight sm:text-5xl">
+              Real value. Visible impact.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-gray-700">
+              The school-focused program builds AI-literate thinkers and gives
+              institutions a practical innovation story parents can understand.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {schoolGains.map((gain) => (
+              <div key={gain} className="rounded-lg border border-gray-200 bg-gray-50 p-5">
+                <CheckCircle2 className="mb-4 h-6 w-6 text-purple-800" aria-hidden="true" />
+                <p className="font-bold text-gray-900">{gain}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
