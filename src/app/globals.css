@@ -32,6 +32,41 @@
   }
 }
 
+@keyframes bootcamp-shine {
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateX(-35%);
+  }
+  45%,
+  55% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(35%);
+  }
+}
+
+@keyframes bootcamp-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes bootcamp-soft-bounce {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.02);
+  }
+}
+
 /* :root {
   --background: #ffffff;
   --foreground: #171717;
