@@ -16,7 +16,6 @@ import {
   Users,
   X,
 } from "lucide-react";
-import { usePathname } from "next/navigation";
 
 const toolChips = ["ChatGPT", "Gemini", "Claude", "Canva AI", "No-code sites"];
 
@@ -28,23 +27,18 @@ const popupStats = [
 ];
 
 export default function BootcampPopup() {
-  const pathname = usePathname();
   const closeButtonRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (pathname === "/ai-bootcamp") return;
-
     const shouldPreviewPopup = new URLSearchParams(window.location.search).get("bootcampPopup") === "1";
-    const wasDismissed = window.sessionStorage.getItem("aiBootcampPopupDismissed");
-    if (wasDismissed && !shouldPreviewPopup) return;
 
     const timer = window.setTimeout(() => {
       setIsVisible(true);
     }, shouldPreviewPopup ? 150 : 850);
 
     return () => window.clearTimeout(timer);
-  }, [pathname]);
+  }, []);
 
   useEffect(() => {
     if (!isVisible) return;
@@ -68,7 +62,6 @@ export default function BootcampPopup() {
   }, [isVisible]);
 
   function closePopup() {
-    window.sessionStorage.setItem("aiBootcampPopupDismissed", "true");
     setIsVisible(false);
   }
 
@@ -184,13 +177,26 @@ export default function BootcampPopup() {
               ))}
             </div>
 
-            <div className="mt-4 hidden rounded-lg border border-cyan-300/20 bg-cyan-300/10 p-4 sm:block">
-              <div className="flex items-start gap-3">
-                <ScanLine className="mt-1 h-6 w-6 flex-none text-cyan-200" aria-hidden="true" />
-                <p className="text-sm leading-6 text-cyan-50">
-                  Students learn to question AI outputs, spot misinformation,
-                  understand limitations and bias, use AI for genuine academic
-                  productivity, and build a real AI-driven project.
+            <div className="mt-4 grid grid-cols-[74px_1fr] items-center gap-3 rounded-lg border border-cyan-300/25 bg-cyan-300/10 p-3 sm:grid-cols-[88px_1fr] sm:p-4">
+              <div className="relative aspect-square overflow-hidden rounded-md border border-cyan-300 bg-white p-1 shadow-[0_0_22px_rgba(103,232,249,0.42)]">
+                <Image
+                  src="/images/ai-bootcamp/ai-builders-qr.png"
+                  alt="AI Builders Bootcamp registration QR code"
+                  width={132}
+                  height={132}
+                  className="h-full w-full object-cover"
+                />
+                <span className="absolute left-2 right-2 h-[3px] animate-[bootcamp-qr-scan-tight_1.45s_linear_infinite] bg-gradient-to-r from-transparent via-cyan-300 to-transparent shadow-[0_0_14px_rgba(103,232,249,1)] motion-reduce:animate-none" />
+              </div>
+
+              <div>
+                <p className="flex items-center gap-2 text-sm font-black uppercase tracking-normal text-cyan-100">
+                  <ScanLine className="h-4 w-4" aria-hidden="true" />
+                  Scan to register
+                </p>
+                <p className="mt-1 text-sm leading-6 text-cyan-50">
+                  Rs.100 fully refundable seat booking. Batch starts 15 May with
+                  limited live seats.
                 </p>
               </div>
             </div>

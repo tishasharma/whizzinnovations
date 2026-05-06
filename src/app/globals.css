@@ -20,6 +20,15 @@
   }
 }
 
+@keyframes bootcamp-qr-scan-tight {
+  from {
+    top: 6px;
+  }
+  to {
+    top: calc(100% - 10px);
+  }
+}
+
 @keyframes bootcamp-pulse-ring {
   0% {
     opacity: 0.85;
@@ -47,6 +56,17 @@
   }
 }
 
+@keyframes bootcamp-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes bootcamp-float {
   0%,
   100% {
@@ -57,6 +77,16 @@
   }
 }
 
+@keyframes bootcamp-soft-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 28px rgba(103, 232, 249, 0.24);
+  }
+  50% {
+    box-shadow: 0 0 42px rgba(168, 85, 247, 0.36);
+  }
+}
+
 @keyframes bootcamp-soft-bounce {
   0%,
   100% {
@@ -64,6 +94,14 @@
   }
   50% {
     transform: translateY(-3px) scale(1.02);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bootcamp-motion-safe {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
 
