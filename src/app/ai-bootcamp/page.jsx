@@ -172,7 +172,7 @@ export default function AIBootcampPage() {
         <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#050509] to-transparent" />
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1fr_430px]">
-          <div className="max-w-4xl py-10">
+          <div className="max-w-4xl py-10 bootcamp-motion-safe animate-[bootcamp-fade-up_700ms_ease-out_both]">
             <div className="mb-6 flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/35 bg-cyan-300/10 px-4 py-2 text-sm font-black uppercase tracking-normal text-cyan-100">
                 <Sparkles className="h-4 w-4" aria-hidden="true" />
@@ -198,7 +198,7 @@ export default function AIBootcampPage() {
 
             <div className="mt-8 grid max-w-4xl grid-cols-2 gap-3 lg:grid-cols-4">
               {highlights.map(({ value, label, icon: Icon }) => (
-                <div key={label} className="rounded-lg border border-white/15 bg-white/10 p-4 backdrop-blur">
+                <div key={label} className="rounded-lg border border-white/15 bg-white/10 p-4 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-cyan-300/45 hover:bg-white/15">
                   <Icon className="mb-3 h-5 w-5 text-cyan-200" aria-hidden="true" />
                   <p className="text-2xl font-black">{value}</p>
                   <p className="text-sm text-purple-100">{label}</p>
@@ -224,7 +224,7 @@ export default function AIBootcampPage() {
             </div>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[430px]">
+          <div className="relative mx-auto w-full max-w-[430px] bootcamp-motion-safe animate-[bootcamp-fade-up_760ms_ease-out_120ms_both]">
             <div className="absolute -inset-4 rounded-lg bg-purple-500/20 blur-2xl" />
             <div className="relative overflow-hidden rounded-lg border border-white/20 bg-black shadow-2xl shadow-purple-950/60">
               <Image
@@ -248,7 +248,7 @@ export default function AIBootcampPage() {
 
       <section className="bg-[#050509] px-5 py-12 sm:px-8 lg:px-12">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-5 md:grid-cols-3">
-          <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+          <div className="rounded-lg border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/8">
             <GraduationCap className="mb-4 h-8 w-8 text-cyan-200" aria-hidden="true" />
             <h2 className="text-2xl font-black">Beginner friendly</h2>
             <p className="mt-3 leading-7 text-purple-100">
@@ -256,7 +256,7 @@ export default function AIBootcampPage() {
               basics and move toward useful building.
             </p>
           </div>
-          <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+          <div className="rounded-lg border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/8">
             <Target className="mb-4 h-8 w-8 text-cyan-200" aria-hidden="true" />
             <h2 className="text-2xl font-black">Output focused</h2>
             <p className="mt-3 leading-7 text-purple-100">
@@ -264,7 +264,7 @@ export default function AIBootcampPage() {
               reuse after the class.
             </p>
           </div>
-          <div className="rounded-lg border border-white/10 bg-white/5 p-6">
+          <div className="rounded-lg border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/8">
             <Gauge className="mb-4 h-8 w-8 text-cyan-200" aria-hidden="true" />
             <h2 className="text-2xl font-black">Fast and practical</h2>
             <p className="mt-3 leading-7 text-purple-100">
@@ -344,7 +344,7 @@ export default function AIBootcampPage() {
 
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {modules.map(({ title, eyebrow, copy, icon: Icon }) => (
-                <article key={title} className="rounded-lg border border-gray-200 bg-gray-50 p-5 shadow-sm">
+                <article key={title} className="rounded-lg border border-gray-200 bg-gray-50 p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-purple-300 hover:shadow-md">
                   <div className="mb-4 flex items-center justify-between gap-3">
                     <Icon className="h-7 w-7 text-purple-800" aria-hidden="true" />
                     <span className="rounded-full bg-purple-100 px-3 py-1 text-xs font-black uppercase tracking-normal text-purple-900">
@@ -491,7 +491,7 @@ export default function AIBootcampPage() {
 
           <div className="mt-9 grid grid-cols-1 gap-5 lg:grid-cols-3">
             {previousProgramReviews.map((review) => (
-              <article key={review.title} className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+              <article key={review.title} className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-purple-300 hover:shadow-md">
                 <div className="mb-5 flex gap-1 text-purple-700" aria-label="Five star review">
                   {[1, 2, 3, 4, 5].map((star) => (
                     <Star key={star} className="h-5 w-5 fill-current" aria-hidden="true" />
@@ -529,7 +529,7 @@ export default function AIBootcampPage() {
 
           <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
-              <div key={project} className="rounded-lg border border-white/10 bg-white/5 p-5">
+              <div key={project} className="rounded-lg border border-white/10 bg-white/5 p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-300/30 hover:bg-white/8">
                 <Rocket className="mb-4 h-6 w-6 text-cyan-200" aria-hidden="true" />
                 <h3 className="text-xl font-black">{project}</h3>
               </div>
@@ -594,7 +594,7 @@ export default function AIBootcampPage() {
       </section>
 
       <section id="register" className="bg-gray-950 px-5 py-14 text-white sm:px-8 lg:px-12">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 rounded-lg border border-white/10 bg-white/5 p-6 sm:p-8 lg:grid-cols-[1fr_300px]">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 rounded-lg border border-white/10 bg-white/5 p-6 sm:p-8 lg:grid-cols-[1fr_380px] bootcamp-motion-safe animate-[bootcamp-fade-up_720ms_ease-out_both]">
           <div>
             <p className="mb-2 inline-flex items-center gap-2 text-sm font-black uppercase tracking-normal text-cyan-100">
               <ScanLine className="h-4 w-4" aria-hidden="true" />
@@ -602,9 +602,9 @@ export default function AIBootcampPage() {
             </p>
             <h2 className="text-3xl font-black">Registrations are open now</h2>
             <p className="mt-3 max-w-3xl leading-7 text-purple-100">
-              Batch starts 15 May. The scanner is placed here in the dedicated
-              registration section so visitors can easily scan the QR code or
-              call the Whizz Dream team to reserve a seat.
+              Batch starts 15 May. Scan the large QR code to reserve your seat,
+              or call the Whizz Dream team directly for quick registration
+              support.
             </p>
             <a
               href="tel:+917011286545"
@@ -615,25 +615,42 @@ export default function AIBootcampPage() {
             </a>
           </div>
 
-          <div className="mx-auto w-full max-w-[260px]">
-            <div className="relative overflow-hidden rounded-lg border border-cyan-300/35 bg-black shadow-[0_0_34px_rgba(103,232,249,0.22)]">
-              <Image
-                src="/images/ai-bootcamp/ai-builders-bootcamp.png"
-                alt="AI Builders Bootcamp QR registration poster"
-                width={676}
-                height={1052}
-                className="h-auto w-full"
-              />
-              <span className="absolute bottom-[19%] right-[2.6%] rounded-full bg-cyan-300 px-2.5 py-1 text-[10px] font-black uppercase tracking-normal text-gray-950 shadow-[0_0_18px_rgba(103,232,249,0.65)]">
-                Scan here
-              </span>
-              <div className="absolute bottom-[3.2%] right-[2.7%] aspect-square w-[15.9%] overflow-hidden rounded-md border-2 border-cyan-300 shadow-[0_0_26px_rgba(103,232,249,0.95)]">
-                <span className="absolute inset-0 rounded-md border border-white/70" />
-                <span className="absolute left-0 right-0 top-0 h-[3px] animate-[bootcamp-qr-scan_1.75s_linear_infinite] bg-gradient-to-r from-transparent via-white to-transparent shadow-[0_0_16px_rgba(103,232,249,1)] motion-reduce:animate-none" />
+          <div className="mx-auto w-full max-w-[380px]">
+            <div className="grid gap-3 sm:grid-cols-[1fr_0.7fr] lg:grid-cols-1 xl:grid-cols-[1fr_0.7fr]">
+              <div className="rounded-lg border border-cyan-300/45 bg-white p-3 text-gray-950 shadow-[0_0_34px_rgba(103,232,249,0.22)] bootcamp-motion-safe animate-[bootcamp-soft-glow_3.4s_ease-in-out_infinite]">
+                <div className="relative aspect-square overflow-hidden rounded-md border border-gray-200 bg-white">
+                  <Image
+                    src="/images/ai-bootcamp/ai-builders-qr.png"
+                    alt="AI Builders Bootcamp QR registration code"
+                    width={132}
+                    height={132}
+                    className="h-full w-full object-cover"
+                  />
+                  <span className="absolute left-2 right-2 h-[4px] animate-[bootcamp-qr-scan-tight_1.5s_linear_infinite] bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_18px_rgba(34,211,238,1)] motion-reduce:animate-none" />
+                </div>
+                <p className="mt-3 text-center text-sm font-black uppercase tracking-normal text-gray-950">
+                  Scan QR to register
+                </p>
+                <p className="mt-1 text-center text-xs font-bold text-purple-800">
+                  Rs.100 fully refundable
+                </p>
+              </div>
+
+              <div className="relative min-h-[220px] overflow-hidden rounded-lg border border-white/10 bg-black sm:min-h-0 lg:min-h-[300px] xl:min-h-0">
+                <Image
+                  src="/images/ai-bootcamp/ai-builders-bootcamp.png"
+                  alt="AI Builders Bootcamp registration poster"
+                  fill
+                  className="object-cover object-[58%_68%]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
+                <span className="absolute bottom-3 left-3 right-3 rounded-md bg-black/72 px-3 py-2 text-center text-xs font-black uppercase tracking-normal text-cyan-100 backdrop-blur">
+                  Limited seats only
+                </span>
               </div>
             </div>
             <p className="mt-3 text-center text-sm font-bold text-cyan-100">
-              Scan the QR area on the poster
+              Scanner is highlighted above for faster registration
             </p>
           </div>
         </div>
