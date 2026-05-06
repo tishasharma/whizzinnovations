@@ -18,12 +18,13 @@ export default function Trainings() {
         <section className="mb-16">
           <div className="grid items-center gap-8 rounded-lg bg-gray-950 p-8 text-white shadow-xl md:grid-cols-[1fr_auto]">
             <div>
-              <p className="mb-3 text-sm font-bold uppercase tracking-normal text-cyan-200">Upcoming AI cohort</p>
+              <p className="mb-3 text-sm font-bold uppercase tracking-normal text-cyan-200">Our awaited upcoming program is about to start</p>
               <h2 className="mb-4 text-3xl font-black md:text-4xl">AI Builders Bootcamp</h2>
               <p className="max-w-3xl text-lg leading-8 text-purple-100">
                 Learn by building with AI through 16 hours of live online sessions.
-                Build prompt confidence, content workflows, and practical mini projects
-                with a bonus vibe coding session.
+                Build prompt confidence, content workflows, automation habits,
+                practical mini projects, and a bonus vibe coding session for apps
+                and webpages.
               </p>
               <div className="mt-5 flex flex-wrap gap-3 text-sm font-semibold text-cyan-100">
                 <span className="rounded-full border border-cyan-300/30 px-3 py-1">2 weeks</span>

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Clock3, MonitorPlay, Phone, ScanLine, Users, X } from "lucide-react";
+import { ArrowRight, Bot, Clock3, MonitorPlay, Phone, Rocket, ScanLine, Users, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 
 export default function BootcampPopup() {
@@ -101,17 +101,18 @@ export default function BootcampPopup() {
           <div className="absolute -right-14 -top-14 h-44 w-44 rounded-full border border-cyan-300/30 animate-[bootcamp-pulse-ring_2.8s_ease-out_infinite] motion-reduce:animate-none" />
 
           <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-sm font-semibold uppercase tracking-normal text-cyan-100">
-            <ScanLine className="h-4 w-4" aria-hidden="true" />
-            Registration scanner live
+            <Rocket className="h-4 w-4" aria-hidden="true" />
+            Awaited upcoming program
           </p>
 
           <h2 id="bootcamp-popup-title" className="max-w-[10ch] text-4xl font-black leading-none text-white sm:text-5xl">
-            AI Builders Bootcamp
+            AI Builders Bootcamp is starting soon
           </h2>
 
           <p id="bootcamp-popup-description" className="mt-4 max-w-xl text-base leading-7 text-purple-100">
-            Stop only consuming AI. Learn how to build useful prompts, content systems,
-            workflows, and mini projects through live online sessions.
+            A 2-week live online course to help learners build with AI:
+            prompts, content systems, practical workflows, vibe coding, and
+            real mini projects.
           </p>
 
           <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -127,16 +128,27 @@ export default function BootcampPopup() {
             </div>
             <div className="rounded-lg border border-white/10 bg-white/5 p-4">
               <Users className="mb-3 h-5 w-5 text-cyan-200" aria-hidden="true" />
-              <p className="text-lg font-bold">Limited Seats</p>
+              <p className="text-lg font-bold">Starting Soon</p>
               <p className="text-sm text-purple-100">Batch starts 15 May</p>
             </div>
           </div>
 
           <ul className="mt-6 grid gap-3 text-sm leading-6 text-purple-50 sm:text-base">
+            <li className="border-l-2 border-cyan-300 pl-3">Upcoming program by Whizz Dream Innovation and Training Basket.</li>
             <li className="border-l-2 border-cyan-300 pl-3">AI basics: understand how AI actually works.</li>
             <li className="border-l-2 border-cyan-300 pl-3">Prompt skills: get better, ready-to-use outputs.</li>
-            <li className="border-l-2 border-cyan-300 pl-3">Create content and build real tools, workflows, and systems.</li>
+            <li className="border-l-2 border-cyan-300 pl-3">Create content, automate tasks, and build project demos.</li>
           </ul>
+
+          <div className="mt-5 rounded-lg border border-cyan-300/20 bg-cyan-300/10 p-4">
+            <div className="flex items-center gap-3">
+              <Bot className="h-6 w-6 flex-none text-cyan-200" aria-hidden="true" />
+              <p className="text-sm leading-6 text-cyan-50">
+                Course focus: practical AI confidence for students,
+                professionals, creators, and entrepreneurs.
+              </p>
+            </div>
+          </div>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Link
