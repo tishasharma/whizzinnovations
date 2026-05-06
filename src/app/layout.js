@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faXTwitter, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import Image from "next/image";
+import BootcampPopup from "@/components/ai-bootcamp/BootcampPopup";
 import "./globals.css";
 
 export const metadata = {
@@ -25,12 +26,14 @@ export default function RootLayout({ children }) {
               <Link href="/about" className="hover:text-blue-700">About</Link>
               <Link href="/team" className="hover:text-blue-700">Team</Link>
               <Link href="/trainings" className="hover:text-blue-700">Trainings</Link>
+              <Link href="/ai-bootcamp" className="font-semibold hover:text-blue-700">AI Bootcamp</Link>
               <Link href="/contact" className="hover:text-blue-700">Contact</Link>
             </nav>
           </div>
         </header>
       
         {children}
+        <BootcampPopup />
 
         <footer className="text-center py-6 shadow-[-4px_-4px_10px_rgba(0,0,0,0.1)]">
           <div className="py-5 px-4 sm:px-16 flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-0">
@@ -42,6 +45,7 @@ export default function RootLayout({ children }) {
               <Link href="/about" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">About</Link>
               <Link href="/team" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Team</Link>
               <Link href="/trainings" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Trainings</Link>
+              <Link href="/ai-bootcamp" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">AI Bootcamp</Link>
               <Link href="/contact" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Contact</Link>
             </div>
             
