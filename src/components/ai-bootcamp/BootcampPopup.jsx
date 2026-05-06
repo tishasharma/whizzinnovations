@@ -138,15 +138,28 @@ export default function BootcampPopup() {
               Upcoming AI Builders Bootcamp
             </p>
 
-            <h2 id="bootcamp-popup-title" className="text-3xl font-black leading-none text-white sm:text-5xl">
-              Hurry up. Registrations are open now.
-            </h2>
+            <div className="grid grid-cols-[1fr_86px] items-start gap-3 sm:grid-cols-[1fr_118px]">
+              <div>
+                <h2 id="bootcamp-popup-title" className="text-3xl font-black leading-none text-white sm:text-5xl">
+                  Hurry up. Registrations are open now.
+                </h2>
 
-            <p id="bootcamp-popup-description" className="mt-3 max-w-xl text-sm leading-6 text-purple-100 sm:mt-4 sm:text-base sm:leading-7">
-              A 16-hour, 2-week live program with 8 practical sessions on AI
-              literacy, prompt skills, Canva AI, no-code websites, responsible
-              AI, and real project building.
-            </p>
+                <p id="bootcamp-popup-description" className="mt-3 max-w-xl text-sm leading-6 text-purple-100 sm:mt-4 sm:text-base sm:leading-7">
+                  A 16-hour, 2-week live program with 8 practical sessions on AI
+                  literacy, prompt skills, Canva AI, no-code websites,
+                  responsible AI, and real project building.
+                </p>
+              </div>
+
+              <div className="relative mt-3 aspect-[4/5] overflow-hidden rounded-lg border border-white/15 bg-black shadow-lg shadow-purple-900/35 sm:mt-1">
+                <Image
+                  src="/images/ai-bootcamp/master-ai-square.jpeg"
+                  alt="AI bootcamp robot assistant"
+                  fill
+                  className="object-cover object-[74%_58%]"
+                />
+              </div>
+            </div>
 
             <div className="mt-4 hidden flex-wrap gap-2 sm:flex">
               {toolChips.map((chip, index) => (
@@ -184,7 +197,7 @@ export default function BootcampPopup() {
 
             <div className="mt-5 flex flex-col gap-2 sm:mt-7 sm:flex-row sm:gap-3">
               <Link
-                href="/ai-bootcamp#register"
+                href="/ai-bootcamp"
                 onClick={closePopup}
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-purple-600 px-5 py-3 font-black text-white shadow-lg shadow-purple-900/40 transition hover:bg-purple-500 sm:min-h-12"
               >
