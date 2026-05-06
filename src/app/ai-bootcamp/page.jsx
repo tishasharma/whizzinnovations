@@ -20,6 +20,7 @@ import {
   Rocket,
   ScanLine,
   Sparkles,
+  Star,
   Target,
   WandSparkles,
   Workflow,
@@ -138,6 +139,24 @@ const schoolGains = [
   "Student certifications",
 ];
 
+const previousProgramReviews = [
+  {
+    title: "Certified Java Bootcamp",
+    source: "Indian Air Force training delivery",
+    copy: "Participants appreciated the structured hands-on approach and the way complex technical topics were converted into clear practice sessions.",
+  },
+  {
+    title: "Cyber Safety Awareness",
+    source: "Khaitan Global School, classes 8-9",
+    copy: "The session helped students connect digital safety with real classroom behaviour, responsible choices, and practical online awareness.",
+  },
+  {
+    title: "Corporate Training Experience",
+    source: "Yamaha Motors, M-Tech, eClerx, ChainSys",
+    copy: "Previous programs were valued for practical delivery, professional mentoring, and outcomes that teams could apply beyond the classroom.",
+  },
+];
+
 export default function AIBootcampPage() {
   return (
     <main className="bg-[#050509] text-white">
@@ -205,20 +224,22 @@ export default function AIBootcampPage() {
             </div>
           </div>
 
-          <div id="scan" className="relative mx-auto w-full max-w-[430px] scroll-mt-28">
-            <div className="absolute -inset-4 rounded-lg bg-cyan-300/20 blur-2xl" />
+          <div className="relative mx-auto w-full max-w-[430px]">
+            <div className="absolute -inset-4 rounded-lg bg-purple-500/20 blur-2xl" />
             <div className="relative overflow-hidden rounded-lg border border-white/20 bg-black shadow-2xl shadow-purple-950/60">
               <Image
-                src="/images/ai-bootcamp/ai-builders-bootcamp.png"
-                alt="AI Builders Bootcamp registration poster"
-                width={676}
-                height={1052}
+                src="/images/ai-bootcamp/master-ai-square.jpeg"
+                alt="Master AI before others even start"
+                width={1024}
+                height={1280}
                 priority
                 className="h-auto w-full"
               />
-              <div className="absolute bottom-[2.4%] right-[2.4%] aspect-square w-[22.7%] overflow-hidden rounded-md border-2 border-cyan-300 shadow-[0_0_26px_rgba(103,232,249,0.95)]">
-                <span className="absolute inset-0 rounded-md border border-white/70" />
-                <span className="absolute left-0 right-0 top-0 h-[3px] animate-[bootcamp-qr-scan_1.75s_linear_infinite] bg-gradient-to-r from-transparent via-white to-transparent shadow-[0_0_16px_rgba(103,232,249,1)] motion-reduce:animate-none" />
+              <div className="absolute bottom-4 left-4 right-4 rounded-lg border border-white/15 bg-black/72 p-4 backdrop-blur">
+                <p className="text-sm font-black uppercase tracking-normal text-cyan-100">
+                  Program highlight
+                </p>
+                <p className="mt-2 text-xl font-black">ChatGPT, Gemini, Claude, Canva AI and no-code websites</p>
               </div>
             </div>
           </div>
@@ -450,6 +471,43 @@ export default function AIBootcampPage() {
         </div>
       </section>
 
+      <section className="bg-gray-50 px-5 py-16 text-gray-950 sm:px-8 lg:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid items-end gap-8 lg:grid-cols-[0.75fr_1fr]">
+            <div>
+              <p className="mb-3 text-sm font-black uppercase tracking-normal text-purple-800">
+                Reviews from previous programs
+              </p>
+              <h2 className="text-4xl font-black leading-tight sm:text-5xl">
+                Trusted training experience behind this bootcamp
+              </h2>
+            </div>
+            <p className="text-lg leading-8 text-gray-700">
+              Whizz Dream Big has delivered school, corporate, and certified
+              training programs before. These highlights show the kind of
+              practical, guided learning approach we are bringing to AI Builders.
+            </p>
+          </div>
+
+          <div className="mt-9 grid grid-cols-1 gap-5 lg:grid-cols-3">
+            {previousProgramReviews.map((review) => (
+              <article key={review.title} className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+                <div className="mb-5 flex gap-1 text-purple-700" aria-label="Five star review">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} className="h-5 w-5 fill-current" aria-hidden="true" />
+                  ))}
+                </div>
+                <h3 className="text-2xl font-black text-gray-950">{review.title}</h3>
+                <p className="mt-1 text-sm font-bold uppercase tracking-normal text-purple-800">
+                  {review.source}
+                </p>
+                <p className="mt-4 leading-7 text-gray-700">{review.copy}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#080711] px-5 py-16 text-white sm:px-8 lg:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-end gap-8 lg:grid-cols-[0.9fr_1fr]">
@@ -535,26 +593,46 @@ export default function AIBootcampPage() {
         </div>
       </section>
 
-      <section className="bg-gray-950 px-5 py-14 text-white sm:px-8 lg:px-12">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 rounded-lg border border-white/10 bg-white/5 p-6 sm:p-8 lg:grid-cols-[1fr_auto]">
+      <section id="register" className="bg-gray-950 px-5 py-14 text-white sm:px-8 lg:px-12">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 rounded-lg border border-white/10 bg-white/5 p-6 sm:p-8 lg:grid-cols-[1fr_300px]">
           <div>
             <p className="mb-2 inline-flex items-center gap-2 text-sm font-black uppercase tracking-normal text-cyan-100">
               <ScanLine className="h-4 w-4" aria-hidden="true" />
-              Limited seats only
+              Scan here to register
             </p>
             <h2 className="text-3xl font-black">Registrations are open now</h2>
             <p className="mt-3 max-w-3xl leading-7 text-purple-100">
-              Batch starts 15 May. Scan the QR code on the poster or call the
-              Whizz Dream team to reserve your seat for the upcoming AI Builders Bootcamp.
+              Batch starts 15 May. The scanner is placed here in the dedicated
+              registration section so visitors can easily scan the QR code or
+              call the Whizz Dream team to reserve a seat.
+            </p>
+            <a
+              href="tel:+917011286545"
+              className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-cyan-300 px-6 py-3 font-black text-gray-950 transition hover:bg-cyan-200"
+            >
+              <Phone className="h-5 w-5" aria-hidden="true" />
+              7011286545
+            </a>
+          </div>
+
+          <div className="mx-auto w-full max-w-[260px]">
+            <div className="relative overflow-hidden rounded-lg border border-cyan-300/35 bg-black shadow-[0_0_34px_rgba(103,232,249,0.22)]">
+              <Image
+                src="/images/ai-bootcamp/ai-builders-bootcamp.png"
+                alt="AI Builders Bootcamp QR registration poster"
+                width={676}
+                height={1052}
+                className="h-auto w-full"
+              />
+              <div className="absolute bottom-[2.4%] right-[2.4%] aspect-square w-[22.7%] overflow-hidden rounded-md border-2 border-cyan-300 shadow-[0_0_26px_rgba(103,232,249,0.95)]">
+                <span className="absolute inset-0 rounded-md border border-white/70" />
+                <span className="absolute left-0 right-0 top-0 h-[3px] animate-[bootcamp-qr-scan_1.75s_linear_infinite] bg-gradient-to-r from-transparent via-white to-transparent shadow-[0_0_16px_rgba(103,232,249,1)] motion-reduce:animate-none" />
+              </div>
+            </div>
+            <p className="mt-3 text-center text-sm font-bold text-cyan-100">
+              Scan the QR area on the poster
             </p>
           </div>
-          <a
-            href="tel:+917011286545"
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-cyan-300 px-6 py-3 font-black text-gray-950 transition hover:bg-cyan-200"
-          >
-            <Phone className="h-5 w-5" aria-hidden="true" />
-            7011286545
-          </a>
         </div>
       </section>
     </main>
