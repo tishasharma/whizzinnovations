@@ -624,7 +624,10 @@ export default function AIBootcampPage() {
                 height={1052}
                 className="h-auto w-full"
               />
-              <div className="absolute bottom-[2.4%] right-[2.4%] aspect-square w-[22.7%] overflow-hidden rounded-md border-2 border-cyan-300 shadow-[0_0_26px_rgba(103,232,249,0.95)]">
+              <span className="absolute bottom-[19%] right-[2.6%] rounded-full bg-cyan-300 px-2.5 py-1 text-[10px] font-black uppercase tracking-normal text-gray-950 shadow-[0_0_18px_rgba(103,232,249,0.65)]">
+                Scan here
+              </span>
+              <div className="absolute bottom-[3.2%] right-[2.7%] aspect-square w-[15.9%] overflow-hidden rounded-md border-2 border-cyan-300 shadow-[0_0_26px_rgba(103,232,249,0.95)]">
                 <span className="absolute inset-0 rounded-md border border-white/70" />
                 <span className="absolute left-0 right-0 top-0 h-[3px] animate-[bootcamp-qr-scan_1.75s_linear_infinite] bg-gradient-to-r from-transparent via-white to-transparent shadow-[0_0_16px_rgba(103,232,249,1)] motion-reduce:animate-none" />
               </div>
