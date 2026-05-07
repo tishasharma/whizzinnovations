@@ -25,7 +25,10 @@ export default function RootLayout({ children }) {
               <Link href="/services" className="hover:text-blue-700">Services</Link>
               <Link href="/about" className="hover:text-blue-700">About</Link>
               <Link href="/team" className="hover:text-blue-700">Team</Link>
-              <Link href="/trainings" className="hover:text-blue-700">Trainings</Link>
+              <Link href="/trainings" className="inline-flex items-center gap-1 hover:text-blue-700">
+                <span>⭐ Trainings</span>
+                <span className="rounded-full bg-purple-100 px-2 py-0.5 text-[10px] font-black uppercase text-purple-900">New</span>
+              </Link>
               <Link href="/ai-bootcamp" className="font-semibold hover:text-blue-700">AI Bootcamp</Link>
               <Link href="/contact" className="hover:text-blue-700">Contact</Link>
             </nav>
@@ -44,7 +47,10 @@ export default function RootLayout({ children }) {
               <Link href="/services" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Services</Link>
               <Link href="/about" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">About</Link>
               <Link href="/team" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Team</Link>
-              <Link href="/trainings" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Trainings</Link>
+              <Link href="/trainings" className="inline-flex items-center gap-1 text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">
+                <span>⭐ Trainings</span>
+                <span className="rounded-full bg-purple-100 px-2 py-0.5 text-[10px] font-black uppercase text-purple-900 no-underline">New</span>
+              </Link>
               <Link href="/ai-bootcamp" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">AI Bootcamp</Link>
               <Link href="/contact" className="text-[#53197d] hover:text-blue-900 underline text-sm sm:text-base">Contact</Link>
             </div>
