@@ -1,33 +1,28 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
   CalendarDays,
-  CheckCircle2,
   Clock3,
   MonitorPlay,
   Phone,
-  Rocket,
   ScanLine,
   Sparkles,
   Users,
   X,
 } from "lucide-react";
 
-const toolChips = ["ChatGPT", "Gemini", "Claude", "Canva AI", "No-code sites"];
-
 const popupStats = [
-  { label: "16 hours", detail: "8 live sessions", icon: Clock3 },
-  { label: "2 weeks", detail: "Starting 15 May", icon: CalendarDays },
-  { label: "Hands-on", detail: "Project practice", icon: MonitorPlay },
-  { label: "Small batch", detail: "Focused mentoring", icon: Users },
+  { label: "16 hours", detail: "Live guided learning", icon: Clock3 },
+  { label: "2 weeks", detail: "Online cohort", icon: MonitorPlay },
+  { label: "1st Batch", detail: "Begins on 8 May", icon: CalendarDays },
+  { label: "2nd Batch", detail: "Begins on 17 May", icon: Users },
 ];
 
 export default function BootcampPopup() {
-  const closeButtonRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -43,10 +38,6 @@ export default function BootcampPopup() {
   useEffect(() => {
     if (!isVisible) return;
 
-    const originalOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    closeButtonRef.current?.focus();
-
     const handleEscape = (event) => {
       if (event.key === "Escape") {
         closePopup();
@@ -56,7 +47,6 @@ export default function BootcampPopup() {
     document.addEventListener("keydown", handleEscape);
 
     return () => {
-      document.body.style.overflow = originalOverflow;
       document.removeEventListener("keydown", handleEscape);
     };
   }, [isVisible]);
@@ -68,167 +58,95 @@ export default function BootcampPopup() {
   if (!isVisible) return null;
 
   return (
-    <div
-      className="fixed inset-0 z-[60] flex items-center justify-center px-3 py-4 sm:px-6"
+    <aside
+      className="fixed bottom-4 right-4 z-[60] w-[calc(100%-2rem)] max-w-[340px] sm:bottom-6 sm:right-6"
       role="presentation"
     >
-      <button
-        type="button"
-        aria-label="Close AI Builders Bootcamp popup"
-        onClick={closePopup}
-        className="absolute inset-0 h-full w-full cursor-default bg-black/80 backdrop-blur-md"
-      />
-
       <section
         role="dialog"
-        aria-modal="true"
+        aria-modal="false"
         aria-labelledby="bootcamp-popup-title"
         aria-describedby="bootcamp-popup-description"
-        className="relative max-h-[calc(100dvh-1.5rem)] w-full max-w-6xl overflow-hidden rounded-lg border border-cyan-200/20 bg-[#080511] text-white shadow-2xl shadow-purple-950/70 animate-[bootcamp-dialog-pop_450ms_ease-out_both]"
+        className="relative overflow-hidden rounded-lg border border-purple-200 bg-white text-gray-950 shadow-2xl shadow-purple-950/20 animate-[bootcamp-corner-pop_420ms_ease-out_both]"
       >
-        <span className="pointer-events-none absolute inset-0 rounded-lg bg-[linear-gradient(115deg,transparent,rgba(103,232,249,0.16),transparent)] animate-[bootcamp-shine_3.2s_ease-in-out_infinite]" />
+        <span className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-purple-700 via-fuchsia-500 to-purple-700" />
 
         <button
-          ref={closeButtonRef}
           type="button"
           onClick={closePopup}
           aria-label="Close popup"
-          className="absolute right-3 top-3 z-30 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/25 bg-black/75 text-white transition hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-cyan-300"
+          className="absolute right-3 top-3 z-20 inline-flex h-9 w-9 items-center justify-center rounded-full border border-purple-200 bg-white/90 text-purple-900 shadow-sm transition hover:border-purple-500 hover:bg-purple-50 focus:outline-none focus:ring-2 focus:ring-purple-400"
         >
-          <X className="h-5 w-5" aria-hidden="true" />
+          <X className="h-4 w-4" aria-hidden="true" />
         </button>
 
-        <div className="grid gap-0 lg:grid-cols-[1fr_0.92fr]">
-          <div className="relative hidden overflow-hidden border-b border-white/10 bg-black lg:block lg:border-b-0 lg:border-r">
-            <div className="relative aspect-[16/9] min-h-[230px] lg:aspect-auto lg:h-full lg:min-h-[560px]">
+        <div className="p-4 sm:p-5">
+          <p className="inline-flex items-center gap-2 rounded-full bg-purple-100 px-3 py-1 text-xs font-black uppercase tracking-normal text-purple-900">
+            <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
+            New AI Bootcamp
+          </p>
+
+          <h2 id="bootcamp-popup-title" className="mt-3 pr-8 text-xl font-black leading-tight text-purple-950 sm:text-2xl">
+            AI Builders Bootcamp registrations are open
+          </h2>
+
+          <p id="bootcamp-popup-description" className="mt-2 text-sm leading-6 text-gray-700">
+            Learn AI tools, prompt skills, Canva AI, no-code websites, and
+            project building in live sessions.
+          </p>
+
+          <div className="mt-3 grid grid-cols-2 gap-2">
+            {popupStats.map(({ label, detail, icon: Icon }) => (
+              <div key={label} className="rounded-lg border border-purple-100 bg-purple-50 p-2.5">
+                <Icon className="mb-1.5 h-4 w-4 text-purple-800" aria-hidden="true" />
+                <p className="text-sm font-black text-purple-950">{label}</p>
+                <p className="text-xs font-semibold text-purple-700">{detail}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-3 grid grid-cols-[74px_1fr] items-center gap-3 rounded-lg border border-purple-200 bg-white p-2.5 shadow-sm">
+            <div className="relative aspect-[13/17] overflow-hidden rounded-md bg-white shadow-[0_0_0_1px_rgba(88,28,135,0.16)]">
               <Image
-                src="/images/ai-bootcamp/master-ai-wide.jpeg"
-                alt="Master AI before others even start bootcamp poster"
-                fill
-                priority
-                className="object-cover object-center"
+                src="/images/ai-bootcamp/ai-builders-qr.png"
+                alt="AI Builders Bootcamp registration QR scanner"
+                width={130}
+                height={170}
+                className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/78 via-black/10 to-transparent" />
+              <span className="absolute left-2 right-2 h-[3px] animate-[bootcamp-qr-scan-tight_1.6s_linear_infinite] bg-gradient-to-r from-transparent via-purple-600 to-transparent shadow-[0_0_12px_rgba(147,51,234,0.85)] motion-reduce:animate-none" />
             </div>
 
-            <div className="absolute bottom-4 left-4 right-4 rounded-lg border border-white/15 bg-black/72 p-4 backdrop-blur sm:right-auto sm:max-w-md">
-              <p className="inline-flex items-center gap-2 rounded-full bg-purple-500 px-3 py-1 text-xs font-black uppercase tracking-normal">
-                <Rocket className="h-4 w-4" aria-hidden="true" />
-                Limited seats only
+            <div>
+              <p className="flex items-center gap-2 text-sm font-black uppercase tracking-normal text-purple-900">
+                <ScanLine className="h-4 w-4" aria-hidden="true" />
+                Scan here
               </p>
-              <h2 className="mt-3 text-3xl font-black leading-none sm:text-4xl">
-                Master AI before others even start
-              </h2>
-              <p className="mt-3 text-sm leading-6 text-purple-100">
-                Open for all. 100% hands-on. Certificate included.
+              <p className="mt-1 text-sm leading-5 text-gray-700">
+                Batch 1 begins on 8 May. Batch 2 begins on 17 May.
               </p>
             </div>
           </div>
 
-          <div className="relative px-4 py-5 sm:px-8 sm:py-8 lg:py-10">
-            <p className="mb-3 inline-flex items-center gap-2 rounded-full border border-cyan-300/35 bg-cyan-300/10 px-3 py-1 text-sm font-black uppercase tracking-normal text-cyan-100 animate-[bootcamp-soft-bounce_1.8s_ease-in-out_infinite] motion-reduce:animate-none">
-              <Sparkles className="h-4 w-4" aria-hidden="true" />
-              Upcoming AI Builders Bootcamp
-            </p>
-
-            <div className="grid grid-cols-[1fr_86px] items-start gap-3 sm:grid-cols-[1fr_118px]">
-              <div>
-                <h2 id="bootcamp-popup-title" className="text-3xl font-black leading-none text-white sm:text-5xl">
-                  Hurry up. Registrations are open now.
-                </h2>
-
-                <p id="bootcamp-popup-description" className="mt-3 max-w-xl text-sm leading-6 text-purple-100 sm:mt-4 sm:text-base sm:leading-7">
-                  A 16-hour, 2-week live program with 8 practical sessions on AI
-                  literacy, prompt skills, Canva AI, no-code websites,
-                  responsible AI, and real project building.
-                </p>
-              </div>
-
-              <div className="relative mt-3 aspect-[4/5] overflow-hidden rounded-lg border border-white/15 bg-black shadow-lg shadow-purple-900/35 sm:mt-1">
-                <Image
-                  src="/images/ai-bootcamp/master-ai-square.jpeg"
-                  alt="AI bootcamp robot assistant"
-                  fill
-                  className="object-cover object-[74%_58%]"
-                />
-              </div>
-            </div>
-
-            <div className="mt-4 hidden flex-wrap gap-2 sm:flex">
-              {toolChips.map((chip, index) => (
-                <span
-                  key={chip}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-2 text-sm font-bold text-white animate-[bootcamp-float_3s_ease-in-out_infinite] motion-reduce:animate-none"
-                  style={{ animationDelay: `${index * 140}ms` }}
-                >
-                  <CheckCircle2 className="h-4 w-4 text-lime-300" aria-hidden="true" />
-                  {chip}
-                </span>
-              ))}
-            </div>
-
-            <div className="mt-4 grid grid-cols-2 gap-2 sm:mt-6 sm:gap-3">
-              {popupStats.map(({ label, detail, icon: Icon }) => (
-                <div key={label} className="rounded-lg border border-white/10 bg-white/5 p-3 sm:p-4">
-                  <Icon className="mb-2 h-5 w-5 text-cyan-200 sm:mb-3" aria-hidden="true" />
-                  <p className="text-base font-black sm:text-lg">{label}</p>
-                  <p className="text-sm text-purple-100">{detail}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-4 grid grid-cols-[74px_1fr] items-center gap-3 rounded-lg border border-cyan-300/25 bg-cyan-300/10 p-3 sm:grid-cols-[88px_1fr] sm:p-4">
-              <div className="relative aspect-square overflow-hidden rounded-md border border-cyan-300 bg-white p-1 shadow-[0_0_22px_rgba(103,232,249,0.42)]">
-                <Image
-                  src="/images/ai-bootcamp/ai-builders-qr.png"
-                  alt="AI Builders Bootcamp registration QR code"
-                  width={132}
-                  height={132}
-                  className="h-full w-full object-cover"
-                />
-                <span className="absolute left-2 right-2 h-[3px] animate-[bootcamp-qr-scan-tight_1.45s_linear_infinite] bg-gradient-to-r from-transparent via-cyan-300 to-transparent shadow-[0_0_14px_rgba(103,232,249,1)] motion-reduce:animate-none" />
-              </div>
-
-              <div>
-                <p className="flex items-center gap-2 text-sm font-black uppercase tracking-normal text-cyan-100">
-                  <ScanLine className="h-4 w-4" aria-hidden="true" />
-                  Scan to register
-                </p>
-                <p className="mt-1 text-sm leading-6 text-cyan-50">
-                  Rs.100 fully refundable seat booking. Batch starts 15 May with
-                  limited live seats.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-5 flex flex-col gap-2 sm:mt-7 sm:flex-row sm:gap-3">
-              <Link
-                href="/ai-bootcamp"
-                onClick={closePopup}
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-purple-600 px-5 py-3 font-black text-white shadow-lg shadow-purple-900/40 transition hover:bg-purple-500 sm:min-h-12"
-              >
-                View full program
-                <ArrowRight className="h-5 w-5" aria-hidden="true" />
-              </Link>
-              <a
-                href="tel:+917011286545"
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-white/20 px-5 py-3 font-black text-white transition hover:bg-white/10 sm:min-h-12"
-              >
-                <Phone className="h-5 w-5" aria-hidden="true" />
-                Call 7011286545
-              </a>
-            </div>
-
-            <p className="mt-3 text-sm text-purple-200 sm:mt-4">
-              Registration fee: Rs.100, fully refundable.
-            </p>
-
-            <div className="pointer-events-none absolute right-8 top-8 hidden text-purple-200/30 lg:block">
-              <ScanLine className="h-10 w-10 animate-[bootcamp-float_2.8s_ease-in-out_infinite] motion-reduce:animate-none" aria-hidden="true" />
-            </div>
+          <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
+            <Link
+              href="/ai-bootcamp"
+              onClick={closePopup}
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg bg-purple-800 px-4 py-2.5 text-sm font-black text-white shadow-lg shadow-purple-900/20 transition hover:bg-purple-700"
+            >
+              View program
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+            <a
+              href="tel:+917011286545"
+              className="inline-flex min-h-11 items-center justify-center gap-2 rounded-lg border border-purple-200 px-4 py-2.5 text-sm font-black text-purple-900 transition hover:bg-purple-50"
+            >
+              <Phone className="h-4 w-4" aria-hidden="true" />
+              7011286545
+            </a>
           </div>
         </div>
       </section>
-    </div>
+    </aside>
   );
 }

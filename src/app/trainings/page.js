@@ -29,7 +29,8 @@ export default function Trainings() {
               <div className="mt-5 flex flex-wrap gap-3 text-sm font-semibold text-cyan-100">
                 <span className="rounded-full border border-cyan-300/30 px-3 py-1">2 weeks</span>
                 <span className="rounded-full border border-cyan-300/30 px-3 py-1">Online live sessions</span>
-                <span className="rounded-full border border-cyan-300/30 px-3 py-1">Rs.100 refundable fee</span>
+                <span className="rounded-full border border-cyan-300/30 px-3 py-1">1st batch: 8 May</span>
+                <span className="rounded-full border border-cyan-300/30 px-3 py-1">2nd batch: 17 May</span>
               </div>
             </div>
             <Link

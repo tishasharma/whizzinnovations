@@ -11,6 +11,17 @@
   }
 }
 
+@keyframes bootcamp-corner-pop {
+  from {
+    opacity: 0;
+    transform: translate(16px, 16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+}
+
 @keyframes bootcamp-qr-scan {
   from {
     transform: translateY(-12px);

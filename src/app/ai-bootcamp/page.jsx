@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  BadgeIndianRupee,
   Bot,
   BrainCircuit,
   CalendarDays,
@@ -35,8 +34,8 @@ export const metadata = {
 const highlights = [
   { value: "16 hrs", label: "Live guided learning", icon: Clock3 },
   { value: "2 weeks", label: "Online cohort", icon: CalendarDays },
-  { value: "Rs.100", label: "Fully refundable fee", icon: BadgeIndianRupee },
-  { value: "15 May", label: "Batch starting", icon: Rocket },
+  { value: "8 May", label: "1st batch begins", icon: Rocket },
+  { value: "17 May", label: "2nd batch begins", icon: Rocket },
 ];
 
 const programFacts = [
@@ -228,10 +227,10 @@ export default function AIBootcampPage() {
             <div className="absolute -inset-4 rounded-lg bg-purple-500/20 blur-2xl" />
             <div className="relative overflow-hidden rounded-lg border border-white/20 bg-black shadow-2xl shadow-purple-950/60">
               <Image
-                src="/images/ai-bootcamp/master-ai-square.jpeg"
+                src="/images/ai-bootcamp/master-ai-wide.jpeg"
                 alt="Master AI before others even start"
-                width={1024}
-                height={1280}
+                width={1280}
+                height={720}
                 priority
                 className="h-auto w-full"
               />
@@ -364,8 +363,8 @@ export default function AIBootcampPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.9fr_1fr]">
           <div className="relative min-h-[360px] overflow-hidden rounded-lg border border-white/10 bg-black">
             <Image
-              src="/images/ai-bootcamp/ai-builders-school.jpeg"
-              alt="AI Builders Bootcamp for AI-literate thinkers"
+              src="/images/ai-bootcamp/school-ready-value.jpeg"
+              alt="Future-ready student AI bootcamp for schools"
               fill
               className="object-cover"
             />
@@ -585,9 +584,6 @@ export default function AIBootcampPage() {
               <p className="rounded-lg border border-white/10 bg-white/5 p-4">
                 <strong>Bonus:</strong> Vibe coding session for apps and webpages
               </p>
-              <p className="rounded-lg border border-white/10 bg-white/5 p-4">
-                <strong>Fee:</strong> Rs.100 registration, fully refundable
-              </p>
             </div>
           </div>
         </div>
@@ -602,9 +598,9 @@ export default function AIBootcampPage() {
             </p>
             <h2 className="text-3xl font-black">Registrations are open now</h2>
             <p className="mt-3 max-w-3xl leading-7 text-purple-100">
-              Batch starts 15 May. Scan the large QR code to reserve your seat,
-              or call the Whizz Dream team directly for quick registration
-              support.
+              1st batch begins on 8 May. 2nd batch begins on 17 May. Scan the
+              QR code to reserve your seat, or call the Whizz Dream team
+              directly for quick registration support.
             </p>
             <a
               href="tel:+917011286545"
@@ -615,39 +611,21 @@ export default function AIBootcampPage() {
             </a>
           </div>
 
-          <div className="mx-auto w-full max-w-[380px]">
-            <div className="grid gap-3 sm:grid-cols-[1fr_0.7fr] lg:grid-cols-1 xl:grid-cols-[1fr_0.7fr]">
-              <div className="rounded-lg border border-cyan-300/45 bg-white p-3 text-gray-950 shadow-[0_0_34px_rgba(103,232,249,0.22)] bootcamp-motion-safe animate-[bootcamp-soft-glow_3.4s_ease-in-out_infinite]">
-                <div className="relative aspect-square overflow-hidden rounded-md border border-gray-200 bg-white">
-                  <Image
-                    src="/images/ai-bootcamp/ai-builders-qr.png"
-                    alt="AI Builders Bootcamp QR registration code"
-                    width={132}
-                    height={132}
-                    className="h-full w-full object-cover"
-                  />
-                  <span className="absolute left-2 right-2 h-[4px] animate-[bootcamp-qr-scan-tight_1.5s_linear_infinite] bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_18px_rgba(34,211,238,1)] motion-reduce:animate-none" />
-                </div>
-                <p className="mt-3 text-center text-sm font-black uppercase tracking-normal text-gray-950">
-                  Scan QR to register
-                </p>
-                <p className="mt-1 text-center text-xs font-bold text-purple-800">
-                  Rs.100 fully refundable
-                </p>
-              </div>
-
-              <div className="relative min-h-[220px] overflow-hidden rounded-lg border border-white/10 bg-black sm:min-h-0 lg:min-h-[300px] xl:min-h-0">
+          <div className="mx-auto w-full max-w-[250px]">
+            <div className="rounded-lg border border-cyan-300/45 bg-white p-3 text-gray-950 shadow-[0_0_34px_rgba(103,232,249,0.22)] bootcamp-motion-safe animate-[bootcamp-soft-glow_3.4s_ease-in-out_infinite]">
+              <div className="relative aspect-[13/17] overflow-hidden rounded-md border border-gray-200 bg-white">
                 <Image
-                  src="/images/ai-bootcamp/ai-builders-bootcamp.png"
-                  alt="AI Builders Bootcamp registration poster"
-                  fill
-                  className="object-cover object-[58%_68%]"
+                  src="/images/ai-bootcamp/ai-builders-qr.png"
+                  alt="AI Builders Bootcamp QR registration scanner"
+                  width={130}
+                  height={170}
+                  className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
-                <span className="absolute bottom-3 left-3 right-3 rounded-md bg-black/72 px-3 py-2 text-center text-xs font-black uppercase tracking-normal text-cyan-100 backdrop-blur">
-                  Limited seats only
-                </span>
+                <span className="absolute left-2 right-2 h-[4px] animate-[bootcamp-qr-scan-tight_1.5s_linear_infinite] bg-gradient-to-r from-transparent via-cyan-400 to-transparent shadow-[0_0_18px_rgba(34,211,238,1)] motion-reduce:animate-none" />
               </div>
+              <p className="mt-3 text-center text-sm font-black uppercase tracking-normal text-gray-950">
+                Scan QR to register
+              </p>
             </div>
             <p className="mt-3 text-center text-sm font-bold text-cyan-100">
               Scanner is highlighted above for faster registration
