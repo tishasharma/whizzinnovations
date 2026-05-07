@@ -106,12 +106,12 @@ export default function BootcampPopup() {
           </div>
 
           <div className="mt-3 grid grid-cols-[74px_1fr] items-center gap-3 rounded-lg border border-purple-200 bg-white p-2.5 shadow-sm">
-            <div className="relative aspect-[13/17] overflow-hidden rounded-md bg-white shadow-[0_0_0_1px_rgba(88,28,135,0.16)]">
+            <div className="relative aspect-square overflow-hidden rounded-md bg-white shadow-[0_0_0_1px_rgba(88,28,135,0.16)]">
               <Image
                 src="/images/ai-bootcamp/ai-builders-qr.png"
                 alt="AI Builders Bootcamp registration QR scanner"
-                width={130}
-                height={170}
+                width={1522}
+                height={1488}
                 className="h-full w-full object-cover"
               />
               <span className="absolute left-2 right-2 h-[3px] animate-[bootcamp-qr-scan-tight_1.6s_linear_infinite] bg-gradient-to-r from-transparent via-purple-600 to-transparent shadow-[0_0_12px_rgba(147,51,234,0.85)] motion-reduce:animate-none" />

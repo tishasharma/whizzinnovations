@@ -561,12 +561,12 @@ export default function AIBootcampPage() {
 
           <div className="mx-auto w-full max-w-[250px]">
             <div className="rounded-lg border border-purple-200 bg-white p-3 text-purple-950 shadow-lg shadow-purple-200/60 bootcamp-motion-safe animate-[bootcamp-soft-glow_3.4s_ease-in-out_infinite]">
-              <div className="relative aspect-[13/17] overflow-hidden rounded-md border border-purple-100 bg-white">
+              <div className="relative aspect-square overflow-hidden rounded-md border border-purple-100 bg-white">
                 <Image
                   src="/images/ai-bootcamp/ai-builders-qr.png"
                   alt="AI Builders Bootcamp QR registration scanner"
-                  width={130}
-                  height={170}
+                  width={1522}
+                  height={1488}
                   className="h-full w-full object-cover"
                 />
                 <span className="absolute left-2 right-2 h-[4px] animate-[bootcamp-qr-scan-tight_1.5s_linear_infinite] bg-gradient-to-r from-transparent via-purple-600 to-transparent shadow-[0_0_18px_rgba(147,51,234,0.85)] motion-reduce:animate-none" />
