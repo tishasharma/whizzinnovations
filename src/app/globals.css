@@ -91,10 +91,10 @@
 @keyframes bootcamp-soft-glow {
   0%,
   100% {
-    box-shadow: 0 0 28px rgba(103, 232, 249, 0.24);
+    box-shadow: 0 0 28px rgba(168, 85, 247, 0.22);
   }
   50% {
-    box-shadow: 0 0 42px rgba(168, 85, 247, 0.36);
+    box-shadow: 0 0 42px rgba(88, 28, 135, 0.28);
   }
 }
 
